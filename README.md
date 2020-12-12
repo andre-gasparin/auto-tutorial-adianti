@@ -18,11 +18,10 @@ https://github.com/kamranahmedse/driver.js?ref=producthunt
 Copie a classe "AutoTutorial.php" para a pasta app/controler/
 
 Copie essas 2 linhas e coloque no fim do seu arquivo app/templates/themeX/layout.html e no caso de utilizar no login ou cadastro no arquivo login.html
-<pre>
+```html
 <script src="https://unpkg.com/driver.js/dist/driver.min.js"></script>
-< link rel="stylesheet" href="https://unpkg.com/driver.js/dist/driver.min.css">
-</pre>
-
+<link rel="stylesheet" href="https://unpkg.com/driver.js/dist/driver.min.css">
+```
 ## Utilização
 
 Adicione a classe para iniciar o tutorial, ex:
