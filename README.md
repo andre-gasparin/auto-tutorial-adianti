@@ -8,16 +8,20 @@
 <img src="https://img.shields.io/badge/PHP->7.2-blueviolet">
 </p>
 
+<img src="https://raw.githubusercontent.com/andre-gasparin/auto-tutorial-adianti/main/assets/auto-tutorial.gif">
+
+Link driver.js:
+https://github.com/kamranahmedse/driver.js?ref=producthunt
 
 ## Instalação
 
 Copie a classe "AutoTutorial.php" para a pasta app/controler/
 
 Copie essas 2 linhas e coloque no fim do seu arquivo app/templates/themeX/layout.html e no caso de utilizar no login ou cadastro no arquivo login.html
-
+<pre>
 <script src="https://unpkg.com/driver.js/dist/driver.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/driver.js/dist/driver.min.css">
-
+</pre>
 
 ## Utilização
 
