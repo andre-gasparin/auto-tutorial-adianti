@@ -1,6 +1,9 @@
 <?php
 namespace AndreGasparin\AutoTutorial;
-    /**
+
+use Adianti\Widget\Base\TScript;
+
+/**
      * Por: André Gasparin
      */
 class AutoTutorial
@@ -12,11 +15,7 @@ class AutoTutorial
 
     public function __construct()
     {
-		echo '
-			<script src="https://unpkg.com/driver.js/dist/driver.min.js"></script>
-			<link rel="stylesheet" href="https://unpkg.com/driver.js/dist/driver.min.css">
-		';
-		
+
         $this->id = uniqid();
         $this->header = "function tutorial".$this->id."(){ const con".$this->id." = new Driver( {   animate: false, doneBtnText: 'Concluir', closeBtnText: 'Fechar', nextBtnText: 'Próximo',  prevBtnText: 'Anterior'} ); con".$this->id.".defineSteps([ ";
     }
@@ -81,8 +80,12 @@ class AutoTutorial
         $js .=  ' tutorial'.$this->id.'(); ';
         $js .=  ' });';
 
-        TScript::create($js);
+        TScript::create('
+        $("<link/>", {  rel: "stylesheet", type: "text/css", href: "vendor/andregasparin/autotutorial/src/driver.min.css" }).appendTo("head");
+        $.getScript("vendor/andregasparin/autotutorial/src/driver.min.js", function(){ '.$js.' }); 
+        ');
         echo "<style> .driver-highlighted-element { z-index: 100004 !important;   pointer-events: none !important;   }  </style>";
+       
         if($debug == true) echo 'JS: <pre>'.$js.'</pre>';
     }
 
