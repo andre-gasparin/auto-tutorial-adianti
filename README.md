@@ -15,13 +15,22 @@ https://github.com/kamranahmedse/driver.js?ref=producthunt
 
 ## Instalação
 
-Copie a classe "AutoTutorial.php" para a pasta app/controler/
 
-Copie essas 2 linhas e coloque no fim do seu arquivo app/templates/themeX/layout.html e no caso de utilizar no login ou cadastro no arquivo login.html
+Para instalar no Adianti Builder, vá na aba de "composer packages" e adicione:
 ```html
-<script src="https://unpkg.com/driver.js/dist/driver.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/driver.js/dist/driver.min.css">
+andregasparin/autotutorial
 ```
+
+É necessário que você tenha o composer instalado.
+
+Abra seu cmd (prompt), com o comando "cd c:/pasta/do/projeto" navegue até a raiz do seu projeto em adianti.
+
+Execute o seguinte comando (podem variar no caso de usar linux ou mac, ex utilizar sudo no início):
+
+```html
+composer require andregasparin/autotutorial
+```
+
 ## Utilização
 
 Adicione a classe para iniciar o tutorial, ex:
@@ -64,7 +73,8 @@ Caso queira implementar algo no sistema, utilize os padrões do Adianti Framewor
 
 * 1.0.0
     * Projeto criado
-
+* 1.1.0
+    * Pacote composer criado
 ## Meta
 
 André Gasparin – [@andre-gasparin] – andre@gasparimsat.com.br / andre.gasparin@hotmail.com
