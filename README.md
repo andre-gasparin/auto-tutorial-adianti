@@ -32,8 +32,11 @@ composer require andregasparin/autotutorial
 ```
 
 ## Utilização
-
-Adicione a classe para iniciar o tutorial, ex:
+Em todas páginas que você utilizar o auto-tutorial no inicio você adiciona a linha:
+```html
+use AndreGasparin\AutoTutorial\AutoTutorial;
+```
+Adicione metodo (ou no controller) para iniciar o tutorial, ex:
 <pre>
 public function onTutorial()
 {
